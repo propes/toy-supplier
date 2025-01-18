@@ -1,9 +1,7 @@
 import { Auth0Provider } from "@auth0/auth0-react";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter, Route, Routes } from "react-router";
-import App from "./App.tsx";
-
+import Router from "./Router.tsx";
 import "./index.css";
 
 const root = document.getElementById("root")!;
@@ -17,11 +15,7 @@ createRoot(root).render(
         redirect_uri: window.location.origin,
       }}
     >
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<App />} />
-        </Routes>
-      </BrowserRouter>
+      <Router />
     </Auth0Provider>
   </StrictMode>,
 );
