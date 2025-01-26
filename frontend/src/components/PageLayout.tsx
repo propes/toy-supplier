@@ -1,4 +1,4 @@
-import { Home } from "lucide-react";
+import { Home, Shapes } from "lucide-react";
 import { FC } from "react";
 import { useNavigate } from "react-router";
 import Content from "@/components/Content";
@@ -22,6 +22,11 @@ const PageLayout: FC<PageLayoutProps> = ({ children }) => {
               text: "Home",
               icon: <Home />,
               onClick: () => navigate("/"),
+            },
+            {
+              text: "Products",
+              icon: <Shapes />,
+              onClick: () => navigate("/products"),
             },
           ]}
         />
