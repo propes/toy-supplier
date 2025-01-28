@@ -1,0 +1,23 @@
+### Get all products with default pagination
+GET http://localhost:5072/products
+
+### Get products with pagination (page 1, 5 items per page)
+GET http://localhost:5072/products?page=2&pageSize=1
+
+### Get products filtered by SKU
+GET http://localhost:5072/products?sku=123
+
+### Get products filtered by name
+GET http://localhost:5072/products?name=example-name
+
+### Get products filtered by price
+GET http://localhost:5072/products?price=19.99
+
+### Get products sorted by price in ascending order
+GET http://localhost:5072/products?sortBy=price&sortDirection=asc
+
+### Get products sorted by price in descending order
+GET http://localhost:5072/products?sortBy=price&sortDirection=desc
+
+### Combine filtering, sorting, and pagination
+GET http://localhost:5072/products?page=1&pageSize=10&sortBy=name&sortDirection=asc&sku=example-sku
