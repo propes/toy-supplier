@@ -1,4 +1,4 @@
-namespace api.Domain;
+namespace api.Features.Products.Domain;
 
 public class Product
 {
